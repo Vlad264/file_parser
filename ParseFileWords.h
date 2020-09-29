@@ -3,7 +3,7 @@
 
 #include "FileParser.h"
 
-class ParseFileWords : public FileParser {
+class ParseFileWords : public FileParser<uint32_t> {
 public:
     ParseFileWords(std::string fileName, std::string word);
     ~ParseFileWords();

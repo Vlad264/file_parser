@@ -3,7 +3,7 @@
 
 #include "FileParser.h"
 
-class ChecksumFile : public FileParser {
+class ChecksumFile : public FileParser<uint32_t> {
 public:
     ChecksumFile(std::string fileName);
     ~ChecksumFile();

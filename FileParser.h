@@ -6,15 +6,16 @@
 #include <iostream>
 #include <cstdint>
 
+template <typename T>
 class FileParser {
 public:
     FileParser(std::string fileName);
     ~FileParser();
 
-    uint32_t parse();
+    T parse();
 
 protected:
-    virtual uint32_t parseFile(std::ifstream &file) = 0;
+    virtual T parseFile(std::ifstream &file) = 0;
 
 private:
     std::string inputFile;
